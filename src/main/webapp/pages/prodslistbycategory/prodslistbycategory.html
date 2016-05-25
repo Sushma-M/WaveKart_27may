@@ -1,0 +1,27 @@
+<wm-partial data-ng-controller="prodslistbycategoryPageController" name="partial1"> 
+ <wm-label name="label1" caption="All Products" fontsize="20" paddingbottom="10" paddingtop="10" show="bind:!Variables.SelectedCategory.dataSet.dataValue"></wm-label> 
+ <wm-label caption="bind:Variables.SelectedCategory.dataSet.dataValue" fontsize="20" paddingbottom="10" paddingtop="10" name="label4"></wm-label> 
+ <wm-livelist listclass="list-group" itemsperrow="4" dataset="bind:Variables.ProductsbyCategory.dataSet" name="prodlist" width="100%" navigation="Advanced" on-click="goToPage_Products"> 
+  <wm-listtemplate layout="thumbnail" name="listtemplate1"> 
+   <wm-tile marginbottom="1" marginleft="1" marginunit="em" marginright="1" margintop="1" name="tile1"> 
+    <wm-layoutgrid name="layoutgrid1"> 
+     <wm-gridrow paddingunit="em" name="gridrow1"> 
+      <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" columnwidth="12" name="gridcolumn1"> 
+       <wm-picture name="Picture" height="6em" picturesource="bind:&quot;http://wmstudio-apps.s3.amazonaws.com/eshop/Products/Thumbnails&quot;+Variables.ProductsbyCategory.dataSet.data[$i].imgUrl"></wm-picture> 
+      </wm-gridcolumn> 
+     </wm-gridrow> 
+     <wm-gridrow borderleft="0" borderbottom="0" borderright="0" bordertop="1" borderstyle="solid" bordercolor="#f8f8f8" name="gridrow2"> 
+      <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" name="gridcolumn4" columnwidth="12"> 
+       <wm-label class="h4" name="Title" caption="bind:Variables.ProductsbyCategory.dataSet.data[$i].name" height="45"></wm-label> 
+      </wm-gridcolumn> 
+     </wm-gridrow> 
+     <wm-gridrow paddingunit="em" paddingleft="1" paddingbottom="1" paddingright="1" paddingtop="1" name="gridrow3"> 
+      <wm-gridcolumn columnwidth="12" class="col-xs-4" name="gridcolumn3"> 
+       <wm-label name="Currency" caption="bind:Variables.ProductsbyCategory.dataSet.data[$i].price | toCurrency: '$'"></wm-label> 
+      </wm-gridcolumn> 
+     </wm-gridrow> 
+    </wm-layoutgrid> 
+   </wm-tile> 
+  </wm-listtemplate> 
+ </wm-livelist> 
+</wm-partial>

@@ -1,0 +1,13 @@
+<wm-partial data-ng-controller="headerPageController" name="header" type="header"> 
+ <wm-layoutgrid backgroundcolor="#005387" name="headerlayout"> 
+  <wm-gridrow name="headerrow"> 
+   <wm-gridcolumn backgroundcolor="#005387" name="headerleft" verticalalign="middle" columnwidth="7"> 
+    <wm-picture picturesource="resources/images/imagelists/eshopicon1.png" name="AppLogo" marginleft="5"></wm-picture> 
+    <wm-label color="#d1d039" caption="WaveKart" class="application-name" name="ApplicationName" fontsize="20"></wm-label> 
+   </wm-gridcolumn> 
+   <wm-gridcolumn name="headerright" horizontalalign="right" verticalalign="middle" columnwidth="5" paddingunit="em" paddingtop="1" paddingright="1"> 
+    <wm-search width="80%" name="productSearch" on-submit="goToPage_Products" dataset="bind:Variables.EshoppingProductData.dataSet" searchkey="name" displaylabel="name" datafield="id"></wm-search> 
+   </wm-gridcolumn> 
+  </wm-gridrow> 
+ </wm-layoutgrid> 
+</wm-partial>
