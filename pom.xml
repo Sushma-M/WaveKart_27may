@@ -282,6 +282,6 @@
         <spring.version>4.2.0.RELEASE</spring.version>
         <profile.props.file>development.properties</profile.props.file>
         <spring.security.version>3.2.3.RELEASE</spring.security.version>
-        <wavemaker.studio.version>8.1.2.1799</wavemaker.studio.version>
+        <wavemaker.studio.version>8.1.2.1807</wavemaker.studio.version>
     </properties>
 </project>
